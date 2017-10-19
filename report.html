@@ -12012,7 +12012,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 将数据切分成特征和对应的标签</span>
@@ -12038,7 +12038,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 可视化 &#39;capital-gain&#39;和&#39;capital-loss&#39; 两个特征</span>
@@ -12370,7 +12370,7 @@ SXaP8WtVTZPMq2qS+zmdJTl+fBcAvJv7gb9TY4xvrwEAAPgRnjABAABtAgIAAGgTEAAAQJuAAAAA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于倾斜的数据使用Log转换</span>
@@ -12705,7 +12705,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
@@ -12846,7 +12846,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用pandas.get_dummies()对&#39;features_raw&#39;数据进行独热编码</span>
@@ -14059,6 +14059,7 @@ BYQkSZKknllASJIkSeqZBYQkSZKknllASJIkSerZ/we3PXCcW8lW5wAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答： </strong> AdaBoost 源于解决能否使用弱分类器和多个实例来构建一个强分类器的问题。如果是二分类，意味着弱分类器错误率高于50%，强分类器错误率低很多。</p>
 <p>训练过程：第一次：训练每一个样本，并赋予其相等的初始化权重，先训练出一个弱分类器并计算该分类器的错误率。然后在同一数据集上再次训练弱分类器。第二次：重新调整每个样本权重，第一次分对的权重将会降低，第一次分错的权重将会提高。接下来：进入下一轮迭代，不断重复训练和调整权重，直到训练错误率为0或者弱分类器的数目满足要求。整个过程通过不断的训练，可以提高对数据的分类能力。</p>
+<p>每个弱分类器在最终集成时权重是不一样的。对错误率小于50%的弱分类器，集成时权重为正值，且错误率越小权重绝对值越大。对错误率大于50%的弱分类器，集成时权重为负值，且错误率越大权重绝对值越大。</p>
 <p>预测时预测两个类别中的一个。</p>
 
 </div>
